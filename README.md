@@ -1,3 +1,11 @@
+
+# pw-store-react (My Password Store)
+see [pw-store-django]()
+## Password Store Notes
+
+[React Bootstrap Modal Form](https://dev.to/kimmese/react-bootstrap-modal-form-31gc)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

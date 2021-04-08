@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "My Passwords",
+  "name": "My Passwords with React JS",
   "icons": [
     {
       "src": "favicon.ico",
