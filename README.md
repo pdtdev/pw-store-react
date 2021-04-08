@@ -1,6 +1,6 @@
 
 # pw-store-react (My Password Store)
-see [pw-store-django]()
+see [pw-store-django](https://github.com/pdtdev/pw-store-django)
 ## Password Store Notes
 
 [React Bootstrap Modal Form](https://dev.to/kimmese/react-bootstrap-modal-form-31gc)
