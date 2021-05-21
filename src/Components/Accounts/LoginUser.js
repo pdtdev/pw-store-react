@@ -1,8 +1,13 @@
 
 import React, { Component } from 'react'
-import Row from 'react-bootstrap/Row'
+// import Row from 'react-bootstrap/Row'
+// import Col from 'react-bootstrap/Col'
+// import Container from 'react-bootstrap/Container'
+import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
 import Container from 'react-bootstrap/Container'
-
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 
 class LoginUser extends Component {
     constructor(props) {
@@ -10,6 +15,8 @@ class LoginUser extends Component {
         this.state = {
             password : ''
         }
+
+        this.handlePasswordChange = this.handlePasswordChange.bind(this)
     }
     handlePasswordChange = (e) => {
         this.setState({
@@ -18,32 +25,52 @@ class LoginUser extends Component {
     }
     render() {
         return (
-            <Container>
-                <form onSubmit={e => this.props.handleLogin(e, {
+                <Form onSubmit={(e) => this.props.handleLogin(e, {
                     username : this.props.username, 
                     password : this.state.password
-                })} >
-                    <Row className="form-group">
-                        <label htmlFor="username" >Username</label>
-                        <input type="text"
-                        onChange={this.props.handleLoginChange} 
-                        value={this.props.username} 
-                        name="username"
-                        id="username"
-                        placeholder="Username" />
-                    </Row>
-                    <Row className="form-group">
-                        <label htmlFor="password" >Password</label>
-                        <input type="password"
-                        onChange={this.handlePasswordChange} 
-                        value={this.state.password} 
-                        name="password"
-                        id="password"
-                        placeholder="Password" />
-                    </Row>
-                    <button type='submit' className="btn btn-primary">Login</button>
-                </form>
-            </Container>
+                    })}
+                    >
+                        <Container>
+                            <Form.Group>
+                            <Row>
+                            <Col xs={3}>
+                                <Form.Label>User name</Form.Label>
+                            </Col>
+                            <Col>
+                                <Form.Control
+                                onChange={this.props.handleLoginChange} 
+                                value={this.props.username} 
+                                name="username"
+                                placeholder="apple-spice32"
+                                autoComplete="username"
+                                ></Form.Control>
+                            </Col>
+                            </Row>
+                            </Form.Group>
+                            <Form.Group>
+                                <Row>
+                                    <Col xs={3}>
+                                    <Form.Label>Password</Form.Label>
+                                    </Col>
+                                    <Col>
+                                    <Form.Control
+                                    type="password"
+                                    onChange={this.handlePasswordChange} 
+                                    value={this.state.password} 
+                                    name="password"
+                                    placeholder="secret password"
+                                    autoComplete="current-password"
+                                    ></Form.Control>
+                                    </Col>
+                                </Row>
+                            </Form.Group>
+                            <Row>
+                                <Col xs={3}>Click login to continue...</Col>
+                                <Col><Button type="submit" variant="primary">Login</Button></Col>
+                            </Row>
+                        </Container>
+                    
+                </Form>
         )
     }
 }
