@@ -1,8 +1,18 @@
 import React, { Component } from 'react';
+// import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 // import styles from './PasswordField.less';
 
+/**
+ *** PasswordField - react-bootstrap ***
+ * Implements: <Form.Control> only in <Form.Group>
+ * 
+ * This pattern is required:
+ * <Form.Group>
+ *     <PasswordField>
+ */
 class PasswordField extends Component {
     
     state = {
@@ -11,7 +21,7 @@ class PasswordField extends Component {
         button_variant: 'warning'
     };
     
-    showHide = (e) => {
+    togglePassword = (e) => {
         e.preventDefault();
         e.stopPropagation();
         this.setState({
@@ -28,10 +38,17 @@ class PasswordField extends Component {
         // </div>
     return(
         <React.Fragment>
-            <Form.Control type={this.state.type} {...this.props}></Form.Control>
-            <Button variant={this.state.button_variant} onClick={this.showHide}>
-                {this.state.button_text} Password
-            </Button>
+            
+            <Col>
+                <Form.Control type={this.state.type} {...this.props}></Form.Control>
+                {/* <Form.Text>Enter password</Form.Text> */}
+            </Col>
+            <Col xs={2} md={3}>
+                <Button variant={this.state.button_variant} onClick={this.togglePassword}>
+                    {this.state.button_text}
+                </Button>
+            </Col>
+            
         </React.Fragment>
     );
     }

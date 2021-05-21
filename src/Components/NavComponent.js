@@ -4,6 +4,7 @@ import RegisterUser from './Accounts/RegisterUser';
 import ListGroup from 'react-bootstrap/ListGroup'
 
 class NavComponent extends Component {
+    
     render(){
         let form;
         switch(this.props.displayed_form){
@@ -11,18 +12,28 @@ class NavComponent extends Component {
                 form = <LoginUser
                         handleLoginChange={this.props.handleLoginChange}
                         handleLogin={this.props.handleLogin}
-                        username={this.props.username}/>;
+                        username={this.props.username}
+                        />;
                 break;
             case 'signup' : 
-                form = <RegisterUser />
+                form = <RegisterUser 
+                display_form={this.props.display_form}/>
                 break;
             default:
                 form = null;
             }
         const logged_in_nav = (
             <ListGroup>
-                <ListGroup.Item as="button" action variant="primary" onClick= {() => this.props.display_form('login')}>Login</ListGroup.Item>
-                <ListGroup.Item as="button" action variant="secondary" onClick= {() => this.props.display_form('signup')}>Signup</ListGroup.Item>
+                <ListGroup.Item as="button" action 
+                variant={this.props.displayed_form === 'login' ? "primary" : "secondary"} 
+                onClick= {() => this.props.display_form('login')}>
+                    Login
+                </ListGroup.Item>
+                <ListGroup.Item as="button" action 
+                variant={this.props.displayed_form === 'signup' ? "primary" : "secondary"} 
+                onClick= {() => this.props.display_form('signup')}>
+                    Signup
+                </ListGroup.Item>
             </ListGroup>
         );
         const logged_out_nav = (

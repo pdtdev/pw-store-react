@@ -17,6 +17,8 @@ export default class ModalPasswordDetailAdd extends Component {
         this.state = {
             activeItem: this.props.activeItem,
         }
+
+        this.handleChange = this.handleChange.bind(this);
     }
 
     handleChange = (e) => {

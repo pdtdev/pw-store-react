@@ -7,7 +7,7 @@ class TblFooterPasswords extends Component {
         return(
             <tfoot>
                 <tr>
-                    <td colSpan="3">
+                    <td colSpan="5">
                         Private username password list
                     </td>
                 </tr>

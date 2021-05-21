@@ -13,9 +13,14 @@ class TblPasswords extends Component {
                 <Table striped bordered hover size="sm">
                     <TblHeadPasswords />
                     <TblBodyPasswords 
-                        logged_in = {this.props.logged_in}
-                        openModal = {this.props.openModal}
                         password_items = {this.props.password_items}
+                        logged_in = {this.props.logged_in}
+                        isOpen = {this.props.isOpen}
+                        openModal = {this.props.openModal}
+                        activeItem={this.props.activeItem}
+                        isPasswordShow = {this.props.isPasswordShow}
+                        showPassword = {this.props.showPassword}
+                        showPasswordClose = {this.props.showPasswordClose}
                     />
                     <TblFooterPasswords />
                 </Table>

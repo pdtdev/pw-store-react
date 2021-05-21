@@ -17,6 +17,12 @@ class TblHeadPasswords extends Component {
                     <th>
                         Update Time
                     </th>
+                    <th>
+                        Password
+                    </th>
+                    <th>
+                        Edit
+                    </th>
                     </tr>
                 </thead>
             </React.Fragment>
