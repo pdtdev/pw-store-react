@@ -5,6 +5,14 @@ see [pw-store-django](https://github.com/pdtdev/pw-store-django)
 
 [React Bootstrap Modal Form](https://dev.to/kimmese/react-bootstrap-modal-form-31gc)
 
+[React Table](https://react-table.tanstack.com/)
+
+[GitHub - react-bootstrap-table2](https://github.com/react-bootstrap-table/react-bootstrap-table2)
+
+[npm - react-bootstrap-table-next](https://www.npmjs.com/package/react-bootstrap-table-next)
+
+[npm - **react**-bootstrap-table2-filter](https://www.npmjs.com/package/react-bootstrap-table2-filter)
+
 
 # Getting Started with Create React App
 
